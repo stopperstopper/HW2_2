@@ -7,24 +7,23 @@ import org.openqa.selenium.WebDriver;
 import pages.OtusPage;
 
 public class OtusPageStep {
-    public WebDriver driver;
-    public OtusPage otusPage;
-    public MenuBar menuBar;
+  public WebDriver driver;
+  public OtusPage otusPage;
+  public MenuBar menuBar;
 
-    public OtusPageStep() {
-        driver = Hooks.driver;
-    }
+  public OtusPageStep() {
+    driver = Hooks.driver;
+  }
 
-    @Given("Главная страница {string} открыта")
-    public void mainPageIsOpened(String pageTitle) {
-        otusPage = new OtusPage(driver);
-        otusPage.open();
+  @Given("Главная страница {string} открыта")
+  public void mainPageIsOpened(String pageTitle) {
+    otusPage = new OtusPage(driver);
+    otusPage.open();
+  }
 
-    }
-
-    @When("Открываем меню {string} и выбираем {string}")
-    public void weOpenMenuAndChooseSubmenu(String menuItemName, String submenuItemName) {
-        menuBar = otusPage.getHeaderMenu();
-        menuBar.chooseHeaderSubMenuItem(menuItemName, submenuItemName);
-    }
+  @When("Открываем меню {string} и выбираем {string}")
+  public void weOpenMenuAndChooseSubmenu(String menuItemName, String submenuItemName) {
+    menuBar = otusPage.getHeaderMenu();
+    menuBar.chooseHeaderSubMenuItem(menuItemName, submenuItemName);
+  }
 }
