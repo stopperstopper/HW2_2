@@ -4,10 +4,10 @@ import components.MenuBar;
 import org.openqa.selenium.WebDriver;
 
 public class OtusPage extends BasePage<OtusPage> {
-  private static final String PATH_NAME = "";
+  
   private MenuBar menuBar;
   public OtusPage(WebDriver driver) {
-    super(driver, PATH_NAME);
+    super(driver, "");
     menuBar = new MenuBar(driver);
   }
 
